@@ -1,4 +1,6 @@
-use collections_exercises::{find_median, find_mode, to_pig_latin};
+use collections_exercises::{
+    company::company_hr_text_interface, find_median, find_mode, to_pig_latin,
+};
 
 fn main() {
     println!("Hello, world!");
@@ -14,4 +16,7 @@ fn main() {
     for word in words {
         println!("{word} -> {}", to_pig_latin(word));
     }
+
+    // print!("{}[2J", 27 as char);
+    company_hr_text_interface();
 }

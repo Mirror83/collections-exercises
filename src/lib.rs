@@ -1,5 +1,7 @@
 use std::collections::HashMap;
 
+pub mod company;
+
 pub fn find_mode(v: &Vec<i32>) -> i32 {
     let mut map = HashMap::new();
     for num in v {
