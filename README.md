@@ -1,6 +1,6 @@
 # Collections Exercises
 
-These are exercises from Chapter 8 of the Rust book.
+These are exercises from [Chapter 8](https://doc.rust-lang.org/book/ch08-03-hash-maps.html#summary) of the [Rust book](https://doc.rust-lang.org/book/).
 
 1. Given a list of integers, use a vector and return the median (when sorted, the value in the middle position) and mode (the value that occurs most often; a hash map will be helpful here) of the list.
 
