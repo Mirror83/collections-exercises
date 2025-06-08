@@ -37,4 +37,21 @@ pub fn find_median(v: &Vec<i32>) -> f32 {
     return median;
 }
 
-// pub fn to_pig_latin(s1: &str) {}
+pub fn to_pig_latin(s1: &str) -> String {
+    assert!(s1.is_ascii());
+
+    for letter in s1.chars() {
+        if !letter.is_alphabetic() {
+            continue;
+        }
+        match letter.to_lowercase().next().unwrap() {
+            'a' | 'e' | 'i' | 'o' | 'u' => return format!("{s1}-hay"),
+            _ => {
+                let rest = &s1[1..s1.len()];
+                return format!("{}-{letter}ay", rest);
+            }
+        }
+    }
+
+    return String::from(s1);
+}
