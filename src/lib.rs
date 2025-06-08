@@ -18,3 +18,23 @@ pub fn find_mode(v: &Vec<i32>) -> i32 {
 
     return mode;
 }
+
+pub fn find_median(v: &Vec<i32>) -> f32 {
+    let mut v_copy = v.clone();
+    v_copy.sort();
+
+    let mut median: f32 = 0.0;
+    let v_length = v.len();
+    if v_length == 0 {
+        median = median;
+    } else if v_length % 2 != 0 {
+        median = v[v_length / 2] as f32;
+    } else {
+        let median_index = v_length / 2;
+        median = (v[median_index] + v[median_index - 1]) as f32 / 2.0;
+    }
+
+    return median;
+}
+
+// pub fn to_pig_latin(s1: &str) {}
